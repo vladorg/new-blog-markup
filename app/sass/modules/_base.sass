@@ -1,0 +1,138 @@
+html
+  overflow-x: hidden
+  &.blocked
+    overflow-y: hidden
+    body
+      padding-right: 16px
+  
+body
+  font-size: $fz
+  font-weight: $fw
+  font-family: $ff
+  line-height: $lh
+  // overflow-x: hidden
+  overflow-x: clip
+  background: $c_body
+  color: $c_text
+  -webkit-tap-highlight-color: $transparent
+  &.root
+    min-height: 100vh
+    +flex(column,0,0,0)
+  &.compensate-for-scrollbar
+    margin-right: 0
+
+
+button,
+input,
+textarea
+  font-family: $ff
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+a
+  color: $c_text
+  text-decoration: none
+  +hover
+    text-decoration: underline
+
+section
+  //overflow: hidden
+
+table
+  th, td
+    border: 1px solid #AEAFB3
+    padding: 20px 32px
+    vertical-align: middle
+    +text(16,500,22,0)
+  th
+    font-weight: 600
+    color: #000
+
+ul.ul
+  li
+    +text(14,400,22,0)
+    +flex(0,0,0,flex-start)
+    +before
+      display: inline-block
+      min-width: 7px
+      min-height: 7px
+      background: $c_primary
+      border-radius: 50%
+      margin: 8px 8px 0 0
+    +not_last
+      margin-bottom: 16px
+
+
+.scroll
+  &::-webkit-scrollbar
+    display: block
+    width: 2px
+    background: $transparent
+  &::-webkit-scrollbar-thumb
+    background: $c_primary
+  &--table
+    &::-webkit-scrollbar
+      height: 4px
+  &--breadcrumbs
+    &::-webkit-scrollbar
+      height: 4px
+    &::-webkit-scrollbar-thumb
+      background: #414141
+
+
+@-moz-document url-prefix()
+  .scroll
+    scrollbar-color: $c_primary $transparent
+    scrollbar-width: thin
+
+
+
+
+.visible-xs
+  display: none!important
+  +xs
+    display: block!important
+
+.hidden-xs
+  +xs
+    display: none !important
+
+.disable
+  display: none!important
+
+
+  
+.content
+  p
+    margin-bottom: 16px
+
+
+div, img, section, span, p
+  &:active,
+  &:target,
+  &:focus
+    outline: none
+
+
+
+
+// ***  For IE10-11  ***
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+  body
+    overflow: hidden
+    &::before
+      content: 'К сожалению сайт не может открыться в вашем браузере, так как он устарел. Пожалуйста обновите ваш браузер и попробуйте еще раз.'
+      position: fixed
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: #fff
+      z-index: 1000
+      text-align: center
+      padding-top: 50px
+
