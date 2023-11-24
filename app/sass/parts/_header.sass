@@ -1,0 +1,42 @@
+.header
+  padding: 6px 0
+  +xs
+    padding: 20px 0
+
+  &__wrap
+    padding: 10px 0
+    +flex(0,0,space-between,center)
+  
+  
+.logo
+  a
+    background: -webkit-linear-gradient(270deg, $c_primary_gradient)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    +text(15,700,$lh,0)
+    +flex(0,0,flex-start,center)
+    +hover
+      +xxs
+        background: $transparent
+        -webkit-text-fill-color: $c_link
+    +xxs
+      +text(20,700,$lh,0)
+    +xs
+      +text(30,700,$lh,0)
+
+.navigation
+  ul
+    +flex(0,0,space-between,center)
+    li
+      +not_last
+        margin-right: 10px
+        +xs
+          margin-right: 40px
+      a
+        display: block
+        +text(10,700,0,0)
+        +xxs
+          +text(16,700,0,0)
+        +xs
+          padding: 10px
+          +text(24,700,0,0)

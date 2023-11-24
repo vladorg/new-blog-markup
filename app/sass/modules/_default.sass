@@ -1,0 +1,151 @@
+.link
+  +hover
+    +xs
+      background: -webkit-linear-gradient(270deg, $c_primary_gradient)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+
+
+.sectionHeading
+  padding-bottom: 20px
+  +xxs
+    padding-bottom: 10px
+  +xs
+    padding-bottom: 40px
+  +flex(0,0,space-between,center)
+
+  &__heading
+    margin-bottom: 0 !important
+    
+
+  &__link
+    +flex(row-reverse,nowrap,0,center)
+    +text(12,700,0,0)
+    +before
+      margin-left: 12px
+    +xxs
+      font-size: 20px
+
+
+
+.posts
+  +xxs
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 20px
+  +sm
+    grid-template-columns: repeat(3, 1fr)
+
+.post
+  border-radius: 20px
+  overflow: hidden
+  background: $c_post
+  display: block
+  max-width: 230px
+  margin: 0 auto
+
+  +xxs
+    max-width: 100%
+
+  +not_last
+    margin-bottom: 32px
+    +xxs
+      margin-bottom: 0
+  
+  &__thumb
+    overflow: hidden
+    img
+      width: 100%
+      height: 183px
+      object-fit: cover
+      +tran(transform, .5s)
+      +xxs
+        height: 293px
+
+  &__caption
+    padding: 14px 8px 8px
+    text-align: center
+    +xxs
+      padding: 22px 14px 14px
+  &__title
+    +text(15,700,0,0)
+    +xxs
+      font-size: 20px
+    +xs
+      font-size: 24px
+  &__subtitle
+    margin-top: 8px
+    +text(12,400,0,$c_post_subtitle)
+    +xxs
+      font-size: 14px
+    +xs
+      font-size: 20px
+  &__description
+    margin-top: 16px
+    font-size: 12px
+    +xxs
+      font-size: 14px
+    +xs
+      font-size: 20px
+  
+  +hover
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 36%)
+
+    .post__thumb
+      img
+        transform: scale(1.5)
+        +tran(transform, 5s)
+
+
+.subscribe
+  padding-top: 42px
+  +xxs
+    padding-top: 80px
+  +xs
+    padding-top: 132px
+
+  &__wrap
+    +xxs
+      max-width: 70%
+      margin: 0 auto
+    +xs
+      max-width: 100%
+    +sm
+      +flex(0,0,space-between,center)
+
+  &__text
+    margin-bottom: 14px
+    +xxs
+      margin-bottom: 24px
+    +sm
+      max-width: 50%
+      margin-bottom: 0
+    
+    p
+      font-size: 10px
+      +xxs
+        font-size: 14px
+      +xs
+        font-size: 20px
+
+  &__heading
+    margin-bottom: 20px
+    +xxs
+      margin-bottom: 32px
+
+  &__field
+    width: 100%
+    position: relative
+    +sm
+      max-width: 46%
+
+    .btn
+      position: absolute
+      top: 50%
+      right: 6px
+      transform: translateY(-50%)
+      +xxs
+        right: 17px
+    
+    .input
+      padding-right: 190px

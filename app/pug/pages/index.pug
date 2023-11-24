@@ -7,6 +7,11 @@ html(lang="en")
 
     include ../blocks/header/header.pug
 
-    main.main Hello world!
+    main.main
+      include ../blocks/sections/intro.pug
+      include ../blocks/sections/recent.pug
+      include ../blocks/sections/latest.pug
+    
+    include ../blocks/subscribe.pug
 
     include ../blocks/footer/footer.pug

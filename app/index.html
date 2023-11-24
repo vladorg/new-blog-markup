@@ -9,11 +9,145 @@
   </head>
   <body class="root page-home">
     <header class="header">
-      <div class="container"></div>
+      <div class="container">
+        <div class="header__wrap">
+          <div class="logo"><a class="ic ic-logo-h" href="/">Ixartz’s Blog </a></div>
+          <nav class="navigation">
+            <ul>
+              <li><a class="link" href="#">Blog</a></li>
+              <li><a class="link" href="#">Newsletter</a></li>
+              <li><a class="link" href="#">Twitter</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
-    <main class="main">Hello world!</main>
+    <main class="main">
+      <section class="intro"> 
+        <div class="container"> 
+          <div class="intro__inner"> 
+            <div class="intro__text"> 
+              <h1 class="heading intro__heading">Hi there, I’m <span class="text-primary">Ixartz</span>👋</h1>
+              <p class="subtitle">
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                 Phasellus malesuada nisi tellus, non imperdiet nisi tempor at.
+                 Lorem ipsum dolor sit amet, <span class="text-primary">consectetur</span> adipiscing elit, 
+                 sed do eiusmod tempor incididunt ut labore et <span class="text-primary">dolore</span>.
+              </p>
+            </div><img class="intro__photo" src="./img/man.png" alt="Man" width="100" height="100">
+          </div>
+          <div class="intro__socials">
+            <ul>
+              <li><a class="ic ic-twitter-h" href="#"> </a></li>
+              <li><a class="ic ic-facebook-h" href="#"> </a></li>
+              <li><a class="ic ic-linkedin-h" href="#"> </a></li>
+              <li><a class="ic ic-youtube-h" href="#"> </a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="projects">
+        <div class="container">
+          <div class="sectionHeading">
+            <h2 class="heading sectionHeading__heading">Recent <span class="text-primary">Projects</span></h2>
+          </div>
+          <div class="projects__wrap"> <a class="project" href="#">
+                    <div class="project__photo"><img src="./img/projects/p1.png" alt="project1" width="50" height="60"></div>
+                    <div class="project__descr">
+                      <div class="project__name"> 
+                        <div class="project__title">Project1</div>
+                        <div class="project__type project__type--tpl1"><span>Web Design</span></div>
+                      </div>
+                      <div class="project__subtitle">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum.</p>
+                        <p>Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.</p>
+                      </div>
+                    </div></a><a class="project" href="#">
+                    <div class="project__photo"><img src="./img/projects/p2.png" alt="project2" width="50" height="60"></div>
+                    <div class="project__descr">
+                      <div class="project__name"> 
+                        <div class="project__title">Project2</div>
+                        <div class="project__type project__type--tpl2"><span>Next.js</span></div>
+                      </div>
+                      <div class="project__subtitle">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum.</p>
+                        <p>Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.</p>
+                      </div>
+                    </div></a><a class="project" href="#">
+                    <div class="project__photo"><img src="./img/projects/p3.png" alt="project3" width="50" height="60"></div>
+                    <div class="project__descr">
+                      <div class="project__name"> 
+                        <div class="project__title">Project3</div>
+                        <div class="project__type project__type--tpl3"><span>Awesome feature</span></div>
+                      </div>
+                      <div class="project__subtitle">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum.</p>
+                        <p>Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.</p>
+                      </div>
+                    </div></a>
+          </div>
+        </div>
+      </section>
+      <section class="latest">
+        <div class="container">
+          <div class="sectionHeading"> 
+            <h2 class="heading sectionHeading__heading">Latest <span class="text-primary">Posts</span></h2><a class="sectionHeading__link link ic ic-arrow ic-arrow-h" href="#">View all Posts </a>
+          </div>
+          <div class="latest__wrap posts">
+                  <article class="post"><a href="#">
+                      <div class="post__thumb"><img src="/img/posts/post1.jpg" alt="post1" width="230" height="103"></div>
+                      <div class="post__caption">
+                        <div class="post__title">Lorem ipsum dolor 1</div>
+                        <div class="post__subtitle">April 24, 2022 - 5 min read</div>
+                        <div class="post__description">Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.</div>
+                      </div></a></article>
+                  <article class="post"><a href="#">
+                      <div class="post__thumb"><img src="/img/posts/post2.jpg" alt="post2" width="230" height="103"></div>
+                      <div class="post__caption">
+                        <div class="post__title">Lorem ipsum dolor 2</div>
+                        <div class="post__subtitle">April 03, 2022 - 4 min read</div>
+                        <div class="post__description">Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.</div>
+                      </div></a></article>
+                  <article class="post"><a href="#">
+                      <div class="post__thumb"><img src="/img/posts/post3.jpg" alt="post3" width="230" height="103"></div>
+                      <div class="post__caption">
+                        <div class="post__title">Lorem ipsum dolor 3</div>
+                        <div class="post__subtitle">March 12, 2022 - 6 min read</div>
+                        <div class="post__description">Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.</div>
+                      </div></a></article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="subscribe"> 
+      <div class="container">
+        <div class="subscribe__wrap">
+          <div class="subscribe__text">
+            <div class="heading subscribe__heading">
+               Subscribe to my <span class="text-primary">Newsletters</span></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Phasellus malesuada nisi tellus, non imperdiet nisi tempor at.</p>
+          </div>
+          <div class="subscribe__field">
+            <input class="input" type="email" name="email" id="subscriber_email" placeholder="Enter your Email">
+            <button class="btn btn--primary">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="footer">
-      <div class="container"></div>
+      <div class="container">
+        <div class="footer__wrap"> 
+          <div class="footer__copy">
+             © Copyright 2022 by Ixartz’s blog. Built with ♥ by CreativeDesignsGuru</div>
+          <ul class="footer__socials">
+            <li><a class="ic ic-github2 ic-github2-h" href="#"> </a></li>
+            <li><a class="ic ic-facebook2 ic-facebook2-h" href="#"> </a></li>
+            <li><a class="ic ic-twitter2 ic-twitter2-h" href="#"> </a></li>
+            <li><a class="ic ic-linkedin2 ic-linkedin2-h" href="#"> </a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
     <script src="./libs/swiper/swiper-bundle.min.js"></script>
     <script src="./libs/aos/aos.js"></script>

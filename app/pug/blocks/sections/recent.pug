@@ -1,0 +1,11 @@
+include ../../storage/projects.pug
+include ../../inc/mixins.pug
+
+section.projects
+  .container
+    .sectionHeading
+      h2.heading.sectionHeading__heading Recent 
+        span.text-primary Projects
+    .projects__wrap 
+      each project in project_list
+        +project(project)

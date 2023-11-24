@@ -1,27 +1,26 @@
 .heading
-  margin-bottom: 40px
-  text-transform: uppercase
-  +text(28,700,36,$c_text)
+  margin-bottom: 16px
+  +text(20,700,28,$c_heading)
+  +xxs
+    font-size: 32px
+    line-height: 40px
   +xs
-    margin-bottom: 32px
-    +text(24,0,32,0)
-  &--white
-    color: #fff
-
-.subheading
-  +text(24,700,32,$c_text)
-
-.title
-  +text(24,700,36,$c_text)
-  +xs
-    +text(18,0,26,0)
+    margin-bottom: 48px
+    font-size: 48px
+    line-height: 56px
     
-.subtitle
-  +text(18,700,26,$c_text)
 
-.label
-  margin-bottom: 8px
-  +text(14,500,24,#000)
+.subtitle
+  +text(10,500,0,0)
+  +xxs
+    font-size: 14px
+  +xs
+    font-size: 26px
+  
+.text-primary
+  background: -webkit-linear-gradient(270deg, $c_primary_gradient)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
 
   
 

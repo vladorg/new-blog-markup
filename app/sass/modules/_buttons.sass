@@ -3,9 +3,23 @@
   background: $transparent
   color: inherit
   border: none
-  padding: 0
-  +tran(all,.2s)
+  padding: 9px 20px
+  border-radius: 30px
+  +text(10,700,0,0)
+  +xxs
+    font-size: 14px
+  +xs
+    padding: 12px 36px
+    font-size: 20px
   +hover
     cursor: pointer
     text-decoration: none
+
+  &--primary
+    background: -webkit-linear-gradient(270deg, $c_primary_gradient)
+    color: $c_secondary
+    +hover
+      +xxs
+        background: $c_link
+        -webkit-text-fill-color: $c_secondary
 

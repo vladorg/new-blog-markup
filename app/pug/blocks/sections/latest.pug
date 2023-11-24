@@ -1,0 +1,12 @@
+include ../../storage/latest.pug
+include ../../inc/mixins.pug
+
+section.latest
+  .container
+    .sectionHeading 
+      h2.heading.sectionHeading__heading Latest 
+        span.text-primary Posts
+      a.sectionHeading__link.link.ic.ic-arrow.ic-arrow-h(href="#") View all Posts 
+    .latest__wrap.posts
+      each post in latest_list
+        +post(post)

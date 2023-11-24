@@ -33,10 +33,10 @@ img
   height: auto
 
 a
-  color: $c_text
+  color: $c_link
   text-decoration: none
   +hover
-    text-decoration: underline
+    text-decoration: none
 
 section
   //overflow: hidden
@@ -92,13 +92,14 @@ ul.ul
 
 
 .visible-xs
-  display: none!important
+  display: block!important
   +xs
-    display: block!important
+    display: none!important
 
 .hidden-xs
+  display: none!important
   +xs
-    display: none !important
+    display: block !important
 
 .disable
   display: none!important
@@ -115,6 +116,7 @@ div, img, section, span, p
   &:target,
   &:focus
     outline: none
+
 
 
 

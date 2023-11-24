@@ -20,27 +20,27 @@
     color: $color
 
 @mixin desc
-  @media (max-width: 1440px)
+  @media (min-width: 1440px)
     @content
 
 @mixin md
-  @media (max-width: 1223px)
+  @media (min-width: 1223px)
     @content
 
 @mixin sm
-  @media (max-width: 992px)
+  @media (min-width: 992px)
     @content
 
 @mixin xs
-  @media (max-width: 768px)
+  @media (min-width: 768px)
     @content
 
 @mixin xxs
-  @media (max-width: 500px)
+  @media (min-width: 500px)
     @content
 
 @mixin b($break)
-  @media (max-width: $break+'px')
+  @media (min-width: $break+'px')
     @content
 
 

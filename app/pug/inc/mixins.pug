@@ -1,0 +1,25 @@
+mixin project(project)
+  - let type = 'project__type--' + project.type.tpl;
+  
+  a.project(href="#")
+    .project__photo
+      img(src=project.photo.src, alt=project.photo.alt width="50" height="60")
+    .project__descr
+      .project__name 
+        .project__title=project.title
+        .project__type(class=type)
+          span=project.type.name
+      .project__subtitle
+        each subtitle in project.subtitles
+          p=subtitle
+
+
+mixin post(post)  
+  article.post
+    a(href="#")
+      .post__thumb
+        img(src=post.thumb.src, alt=post.thumb.alt width="230" height="103")
+      .post__caption
+        .post__title=post.title
+        .post__subtitle=post.subtitle
+        .post__description=post.description
