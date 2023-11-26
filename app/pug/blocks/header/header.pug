@@ -1,3 +1,5 @@
+include ../../storage/menu.pug
+
 header.header
   .container
     .header__wrap
@@ -5,9 +7,6 @@ header.header
         a.ic.ic-logo-h(href="/") Ixartz’s Blog 
       nav.navigation
         ul
-          li
-            a.link(href="#") Blog
-          li
-            a.link(href="#") Newsletter
-          li
-            a.link(href="#") Twitter
+          each link in menu
+            li
+              a.link.ellipsis(href=link.href title=link.title)=link.title

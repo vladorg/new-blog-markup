@@ -6,12 +6,11 @@ mixin project(project)
       img(src=project.photo.src, alt=project.photo.alt width="50" height="60")
     .project__descr
       .project__name 
-        .project__title=project.title
+        .project__title.ellipsis=project.title
         .project__type(class=type)
-          span=project.type.name
+          span.ellipsis=project.type.name
       .project__subtitle
-        each subtitle in project.subtitles
-          p=subtitle
+        p=project.subtitle
 
 
 mixin post(post)  
@@ -21,5 +20,5 @@ mixin post(post)
         img(src=post.thumb.src, alt=post.thumb.alt width="230" height="103")
       .post__caption
         .post__title=post.title
-        .post__subtitle=post.subtitle
+        .post__subtitle.ellipsis=post.subtitle
         .post__description=post.description

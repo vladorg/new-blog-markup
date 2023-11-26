@@ -1,0 +1,14 @@
+include ../../storage/posts.pug
+include ../../inc/mixins.pug
+
+
+section.postsList
+  .container
+    .sectionHeading.sectionHeading--single 
+      h1.heading.sectionHeading__heading Posts Examples
+      p.sectionHeading__subtitle Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum.
+    .posts
+      each post in posts_list
+        +post(post)
+      each post in posts_list
+        +post(post)
