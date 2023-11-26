@@ -4,9 +4,10 @@ header.header
   .container
     .header__wrap
       .logo
-        a.ic.ic-logo-h(href="/") Ixartz’s Blog 
+        a.ic.ic-logo-h(href="/" aria-label="Go to Home page Ixartz’s Blog") Ixartz’s Blog 
       nav.navigation
         ul
           each link in menu
             li
-              a.link.ellipsis(href=link.href title=link.title)=link.title
+              - let aria_label = 'Go to: ' + link.title;
+              a.link.ellipsis(href=link.href title=link.title aria-label=aria_label)=link.title

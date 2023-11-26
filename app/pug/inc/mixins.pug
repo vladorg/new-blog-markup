@@ -1,9 +1,10 @@
 mixin project(project)
   - let type = 'project__type--' + project.type.tpl;
+  //- let aria_label = 'Go to project: ' + project.title;
   
   a.project(href="#")
     .project__photo
-      img(src=project.photo.src, alt=project.photo.alt width="50" height="60")
+      img(src="" data-src=project.photo.src, alt=project.photo.alt width="50" height="60").lazyload
     .project__descr
       .project__name 
         .project__title.ellipsis=project.title
@@ -14,10 +15,12 @@ mixin project(project)
 
 
 mixin post(post)  
+  //- let aria_label2 = 'Go to post: ' + post.title;
+
   article.post
     a(href="#")
       .post__thumb
-        img(src=post.thumb.src, alt=post.thumb.alt width="230" height="103")
+        img(src="" data-src=post.thumb.src, alt=post.thumb.alt width="230" height="103").lazyload
       .post__caption
         .post__title=post.title
         .post__subtitle.ellipsis=post.subtitle

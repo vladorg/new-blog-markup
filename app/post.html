@@ -13,12 +13,15 @@
     <header class="header">
       <div class="container">
         <div class="header__wrap">
-          <div class="logo"><a class="ic ic-logo-h" href="/">Ixartz’s Blog </a></div>
+          <div class="logo"><a class="ic ic-logo-h" href="/" aria-label="Go to Home page Ixartz’s Blog">Ixartz’s Blog </a></div>
           <nav class="navigation">
             <ul>
-              <li><a class="link ellipsis" href="/blog.html" title="Blog">Blog</a></li>
-              <li><a class="link ellipsis" href="/post.html" title="Newsletter">Newsletter</a></li>
-              <li><a class="link ellipsis" href="#" title="Twitter1">Twitter1</a></li>
+              <li><a class="link ellipsis" href="/blog.html" title="Blog" aria-label="Go to: Blog">Blog</a>
+              </li>
+              <li><a class="link ellipsis" href="/post.html" title="Newsletter" aria-label="Go to: Newsletter">Newsletter</a>
+              </li>
+              <li><a class="link ellipsis" href="#" title="Twitter1" aria-label="Go to: Twitter1">Twitter1</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -28,7 +31,7 @@
       <section class="postPage">
         <div class="container">
           <div class="sectionHeading sectionHeading--single"> 
-            <h1 class="heading sectionHeading__heading">Lorem ipsum dolor </h1>
+            <h1 class="heading sectionHeading__heading">Lorem ipsum dolor Lorem ipsum dolor </h1>
           </div>
           <div class="postPage__info">By Ixartz on April 24, 2022 - 5 min read</div>
           <div class="postPage__thumb"> <img src="./img/posts/post1.jpg" alt="thumb" width="230" height="180"></div>
@@ -72,7 +75,7 @@
           </div>
           <div class="subscribe__field">
             <input class="input" type="email" name="email" id="subscriber_email" placeholder="Enter your Email">
-            <button class="btn btn--primary">Subscribe</button>
+            <button class="btn btn--primary" aria-label="Subscribe button">Subscribe</button>
           </div>
         </div>
       </div>
@@ -83,14 +86,15 @@
           <div class="footer__copy">
              © Copyright 2022 by Ixartz’s blog. Built with ♥ by CreativeDesignsGuru</div>
           <ul class="footer__socials">
-            <li><a class="ic ic-github2 ic-github2-h" href="#"> </a></li>
-            <li><a class="ic ic-facebook2 ic-facebook2-h" href="#"> </a></li>
-            <li><a class="ic ic-twitter2 ic-twitter2-h" href="#"> </a></li>
-            <li><a class="ic ic-linkedin2 ic-linkedin2-h" href="#"> </a></li>
+            <li><a class="ic ic-github2 ic-github2-h" href="#" aria-label="Go to Github"> </a></li>
+            <li><a class="ic ic-facebook2 ic-facebook2-h" href="#" aria-label="Go to Facebook"> </a></li>
+            <li><a class="ic ic-twitter2 ic-twitter2-h" href="#" aria-label="Go to Twitter"> </a></li>
+            <li><a class="ic ic-linkedin2 ic-linkedin2-h" href="#" aria-label="Go to Linkedin"> </a></li>
           </ul>
         </div>
       </div>
-    </footer><!-- build:js -->
+    </footer>
+    <script src="./libs/lazysizes/lazysizes.min.js"></script><!-- build:js -->
     <script src="./js/main.js"></script><!-- endbuild --><!-- build:css_main -->
     <link rel="stylesheet" href="./css/main.css"><!-- endbuild -->
   </body>
