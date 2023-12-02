@@ -77,8 +77,8 @@ gulp.task('clean', function() {
 gulp.task('buildHtml', function() {
 	return gulp.src('app/*.html')
 	.pipe(htmlreplace({
-		'css_critical': 'css/critical.css',
-		'css_main': 'css/style.css',
+		'css_critical': 'css/critical.min.css',
+		'css_main': 'css/style.min.css',
 		'js': 'js/main.js'
 	}))
 	.pipe(gulp.dest('dist'))
@@ -90,7 +90,7 @@ gulp.task('buildFonts', function() {
 });
 
 gulp.task('buildCss', function() {
-	return gulp.src('app/css/*.css', '!app/css/libs/*.css', '!app/css/critical.css')
+	return gulp.src('app/css/main.css')
 	.pipe(concat('style.css'))
 	.pipe(gcmq())
 	.pipe(gulp.dest('dist/css/'))

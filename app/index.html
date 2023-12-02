@@ -14,7 +14,8 @@
       <div class="container">
         <div class="header__wrap">
           <div class="logo"><a class="ic ic-logo-h" href="/" aria-label="Go to Home page Ixartz’s Blog">Ixartz’s Blog </a></div>
-          <nav class="navigation">
+          <button class="btn burger ic ic-burger visible-xs" id="burger"></button>
+          <nav class="navigation" id="navigation">
             <ul>
               <li><a class="link ellipsis" href="/blog.html" title="Blog" aria-label="Go to: Blog">Blog</a>
               </li>
@@ -28,125 +29,209 @@
       </div>
     </header>
     <main class="main">
-      <section class="intro"> 
-        <div class="container"> 
-          <div class="intro__inner"> 
-            <div class="intro__text"> 
-              <h1 class="heading intro__heading">Hi there, I’m <span class="text-primary">Ixartz</span>👋</h1>
-              <p class="subtitle">
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                 Phasellus malesuada nisi tellus, non imperdiet nisi tempor at.
-                 Lorem ipsum dolor sit amet, <span class="text-primary">consectetur</span> adipiscing elit, 
-                 sed do eiusmod tempor incididunt ut labore et <span class="text-primary">dolore</span>.
-              </p>
-            </div><img class="intro__photo" src="./img/man.png" alt="Man" width="100" height="100">
-          </div>
-          <div class="intro__socials">
-            <ul>
-              <li><a class="ic ic-twitter-h" href="#" aria-label="Go to Twitter"> </a></li>
-              <li><a class="ic ic-facebook-h" href="#" aria-label="Go to Facebook"> </a></li>
-              <li><a class="ic ic-linkedin-h" href="#" aria-label="Go to Linkedin"> </a></li>
-              <li><a class="ic ic-youtube-h" href="#" aria-label="Go to Youtube"> </a></li>
-            </ul>
-          </div>
+      <!--include ../blocks/sections/intro.pug-->
+      <section class="heroHome"> 
+        <div class="heroHome__wrap"> 
+          <div class="heroHome__el heroHome__el--big"> <a href="#"><img src="./img/img1.jpg" alt="image">
+              <div class="heroHome__caption">This is a Hero section and special post preview in here</div></a></div>
+          <div class="heroHome__el heroHome__el--small hidden-xs"><a href="#"><img src="./img/img2.jpg" alt="image">
+              <div class="heroHome__caption">This is a Hero section and special post preview in here</div></a><a href="#"><img src="./img/img3.jpg" alt="image">
+              <div class="heroHome__caption">This is a Hero section and special post preview in here</div></a></div>
         </div>
       </section>
-      <section class="projects">
-        <div class="container">
-          <div class="sectionHeading">
-            <h2 class="heading sectionHeading__heading">Recent <span class="text-primary">Projects</span></h2>
-          </div>
-          <div class="projects__wrap"> <a class="project" href="#">
-                    <div class="project__photo"><img class="lazyload" src="" data-src="./img/projects/p1.png" alt="project1" width="50" height="60"></div>
-                    <div class="project__descr">
-                      <div class="project__name"> 
-                        <div class="project__title ellipsis">Project1</div>
-                        <div class="project__type project__type--tpl1"><span class="ellipsis">Web Design</span></div>
-                      </div>
-                      <div class="project__subtitle">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum. Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.</p>
-                      </div>
-                    </div></a><a class="project" href="#">
-                    <div class="project__photo"><img class="lazyload" src="" data-src="./img/projects/p2.png" alt="project2" width="50" height="60"></div>
-                    <div class="project__descr">
-                      <div class="project__name"> 
-                        <div class="project__title ellipsis">Project2</div>
-                        <div class="project__type project__type--tpl2"><span class="ellipsis">Next.js</span></div>
-                      </div>
-                      <div class="project__subtitle">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum. Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.</p>
-                      </div>
-                    </div></a><a class="project" href="#">
-                    <div class="project__photo"><img class="lazyload" src="" data-src="./img/projects/p3.png" alt="project3" width="50" height="60"></div>
-                    <div class="project__descr">
-                      <div class="project__name"> 
-                        <div class="project__title ellipsis">Project3</div>
-                        <div class="project__type project__type--tpl3"><span class="ellipsis">Awesome feature</span></div>
-                      </div>
-                      <div class="project__subtitle">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum. Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.</p>
-                      </div>
-                    </div></a><a class="project" href="#">
-                    <div class="project__photo"><img class="lazyload" src="" data-src="./img/projects/p1.png" alt="project3" width="50" height="60"></div>
-                    <div class="project__descr">
-                      <div class="project__name"> 
-                        <div class="project__title ellipsis">hellohello hellohello hellohello hellohello hellohello hellohello hellohello </div>
-                        <div class="project__type project__type--tpl1"><span class="ellipsis">hellohello hellohello hellohello hellohello hellohello hellohello hellohello hellohello hellohello </span></div>
-                      </div>
-                      <div class="project__subtitle">
-                        <p>hellohello hellohello hellohello hellohello</p>
-                      </div>
-                    </div></a>
-          </div>
-        </div>
-      </section>
-      <section class="latest">
+      <!--include ../blocks/sections/recent.pug-->
+      <section class="section latest">
         <div class="container">
           <div class="sectionHeading"> 
             <h2 class="heading sectionHeading__heading">Latest <span class="text-primary">Posts</span></h2><a class="sectionHeading__link link ic ic-arrow ic-arrow-h" href="#">View all </a>
           </div>
-          <div class="latest__wrap posts">
+          <div class="posts">
                   <article class="post"><a href="#">
-                      <div class="post__thumb"><img class="lazyload" src="" data-src="./img/posts/post1.jpg" alt="post1" width="230" height="103"></div>
+                      <div class="post__thumb"><img class="lazyload" src="" data-src="./img/posts/post1.jpg" alt="post1" width="230" height="103">
+                        <div class="post__tags"><a href="#">adventures</a><a href="#">travels</a><a href="#">health</a></div>
+                      </div>
                       <div class="post__caption">
                         <div class="post__title">Lorem ipsum dolor 1</div>
-                        <div class="post__subtitle ellipsis">April 24, 2022 - 5 min read</div>
-                        <div class="post__description">Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.</div>
+                        <div class="post__description">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data. The credibly productivate seamless data.</div>
+                        <div class="post__footer">
+                          <div class="post__footerItem post__subtitle ellipsis ic ic-calendar">April 24, 2022</div>
+                          <div class="post__footerItem post__views ic ic-eye">1835</div>
+                          <div class="post__footerItem post__comments ic ic-comment">240</div>
+                        </div>
                       </div></a></article>
                   <article class="post"><a href="#">
-                      <div class="post__thumb"><img class="lazyload" src="" data-src="./img/posts/post2.jpg" alt="post2" width="230" height="103"></div>
+                      <div class="post__thumb"><img class="lazyload" src="" data-src="./img/posts/post1.jpg" alt="post1" width="230" height="103">
+                        <div class="post__tags"><a href="#">adventures</a><a href="#">travels</a><a href="#">health</a></div>
+                      </div>
+                      <div class="post__caption">
+                        <div class="post__title">Lorem ipsum dolor 1</div>
+                        <div class="post__description">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data. The credibly productivate seamless data.</div>
+                        <div class="post__footer">
+                          <div class="post__footerItem post__subtitle ellipsis ic ic-calendar">April 24, 2022</div>
+                          <div class="post__footerItem post__views ic ic-eye">1835</div>
+                          <div class="post__footerItem post__comments ic ic-comment">240</div>
+                        </div>
+                      </div></a></article>
+                  <article class="post"><a href="#">
+                      <div class="post__thumb"><img class="lazyload" src="" data-src="./img/posts/post2.jpg" alt="post2" width="230" height="103">
+                        <div class="post__tags"><a href="#">adventures</a><a href="#">travels</a><a href="#">health</a></div>
+                      </div>
                       <div class="post__caption">
                         <div class="post__title">Lorem ipsum dolor 2</div>
-                        <div class="post__subtitle ellipsis">April 03, 2022 - 4 min read</div>
-                        <div class="post__description">Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.</div>
+                        <div class="post__description">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data. The credibly productivate seamless data.</div>
+                        <div class="post__footer">
+                          <div class="post__footerItem post__subtitle ellipsis ic ic-calendar">April 03, 2022</div>
+                          <div class="post__footerItem post__views ic ic-eye">1835</div>
+                          <div class="post__footerItem post__comments ic ic-comment">240</div>
+                        </div>
                       </div></a></article>
                   <article class="post"><a href="#">
-                      <div class="post__thumb"><img class="lazyload" src="" data-src="./img/posts/post3.jpg" alt="post3" width="230" height="103"></div>
+                      <div class="post__thumb"><img class="lazyload" src="" data-src="./img/posts/post2.jpg" alt="post2" width="230" height="103">
+                        <div class="post__tags"><a href="#">adventures</a><a href="#">travels</a><a href="#">health</a></div>
+                      </div>
+                      <div class="post__caption">
+                        <div class="post__title">Lorem ipsum dolor 2</div>
+                        <div class="post__description">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data. The credibly productivate seamless data.</div>
+                        <div class="post__footer">
+                          <div class="post__footerItem post__subtitle ellipsis ic ic-calendar">April 03, 2022</div>
+                          <div class="post__footerItem post__views ic ic-eye">1835</div>
+                          <div class="post__footerItem post__comments ic ic-comment">240</div>
+                        </div>
+                      </div></a></article>
+                  <article class="post"><a href="#">
+                      <div class="post__thumb"><img class="lazyload" src="" data-src="./img/posts/post3.jpg" alt="post3" width="230" height="103">
+                        <div class="post__tags"><a href="#">adventures</a><a href="#">travels</a><a href="#">health</a></div>
+                      </div>
                       <div class="post__caption">
                         <div class="post__title">Lorem ipsum dolor 3</div>
-                        <div class="post__subtitle ellipsis">March 12, 2022 - 6 min read</div>
-                        <div class="post__description">Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.</div>
+                        <div class="post__description">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data. The credibly productivate seamless data.</div>
+                        <div class="post__footer">
+                          <div class="post__footerItem post__subtitle ellipsis ic ic-calendar">March 12, 2022</div>
+                          <div class="post__footerItem post__views ic ic-eye">1835</div>
+                          <div class="post__footerItem post__comments ic ic-comment">240</div>
+                        </div>
+                      </div></a></article>
+                  <article class="post"><a href="#">
+                      <div class="post__thumb"><img class="lazyload" src="" data-src="./img/posts/post3.jpg" alt="post3" width="230" height="103">
+                        <div class="post__tags"><a href="#">adventures</a><a href="#">travels</a><a href="#">health</a></div>
+                      </div>
+                      <div class="post__caption">
+                        <div class="post__title">Lorem ipsum dolor 3</div>
+                        <div class="post__description">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data. The credibly productivate seamless data.</div>
+                        <div class="post__footer">
+                          <div class="post__footerItem post__subtitle ellipsis ic ic-calendar">March 12, 2022</div>
+                          <div class="post__footerItem post__views ic ic-eye">1835</div>
+                          <div class="post__footerItem post__comments ic ic-comment">240</div>
+                        </div>
+                      </div></a></article>
+          </div>
+        </div>
+      </section>
+      <section class="section subscribe"> 
+        <div class="container">
+          <div class="subscribe__wrap">
+            <div class="subscribe__text">
+              <h2 class="heading subscribe__heading">
+                 Subscribe to my <span class="text-primary">Newsletters</span></h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>Phasellus malesuada nisi tellus, non imperdiet nisi tempor at.</p>
+            </div>
+            <div class="subscribe__field">
+              <input class="input" type="email" name="email" id="subscriber_email" placeholder="Enter your Email">
+              <button class="btn btn--primary" aria-label="Subscribe button">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section populars">
+        <div class="container">
+          <div class="sectionHeading sectionHeading--single"> 
+            <h2 class="heading sectionHeading__heading">Most <span class="text-primary">populars</span></h2>
+            <p class="sectionHeading__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum.</p>
+          </div>
+          <div class="posts">
+                  <article class="post"><a href="#">
+                      <div class="post__thumb"><img class="lazyload" src="" data-src="./img/posts/post1.jpg" alt="post1" width="230" height="103">
+                        <div class="post__tags"><a href="#">adventures</a><a href="#">travels</a><a href="#">health</a></div>
+                      </div>
+                      <div class="post__caption">
+                        <div class="post__title">Lorem ipsum dolor 1</div>
+                        <div class="post__description">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data. The credibly productivate seamless data.</div>
+                        <div class="post__footer">
+                          <div class="post__footerItem post__subtitle ellipsis ic ic-calendar">April 24, 2022</div>
+                          <div class="post__footerItem post__views ic ic-eye">1835</div>
+                          <div class="post__footerItem post__comments ic ic-comment">240</div>
+                        </div>
+                      </div></a></article>
+                  <article class="post"><a href="#">
+                      <div class="post__thumb"><img class="lazyload" src="" data-src="./img/posts/post2.jpg" alt="post2" width="230" height="103">
+                        <div class="post__tags"><a href="#">adventures</a><a href="#">travels</a><a href="#">health</a></div>
+                      </div>
+                      <div class="post__caption">
+                        <div class="post__title">Lorem ipsum dolor 2</div>
+                        <div class="post__description">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data. The credibly productivate seamless data.</div>
+                        <div class="post__footer">
+                          <div class="post__footerItem post__subtitle ellipsis ic ic-calendar">April 03, 2022</div>
+                          <div class="post__footerItem post__views ic ic-eye">1835</div>
+                          <div class="post__footerItem post__comments ic ic-comment">240</div>
+                        </div>
+                      </div></a></article>
+                  <article class="post"><a href="#">
+                      <div class="post__thumb"><img class="lazyload" src="" data-src="./img/posts/post3.jpg" alt="post3" width="230" height="103">
+                        <div class="post__tags"><a href="#">adventures</a><a href="#">travels</a><a href="#">health</a></div>
+                      </div>
+                      <div class="post__caption">
+                        <div class="post__title">Lorem ipsum dolor 3</div>
+                        <div class="post__description">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data. The credibly productivate seamless data.</div>
+                        <div class="post__footer">
+                          <div class="post__footerItem post__subtitle ellipsis ic ic-calendar">March 12, 2022</div>
+                          <div class="post__footerItem post__views ic ic-eye">1835</div>
+                          <div class="post__footerItem post__comments ic ic-comment">240</div>
+                        </div>
+                      </div></a></article>
+                  <article class="post"><a href="#">
+                      <div class="post__thumb"><img class="lazyload" src="" data-src="./img/posts/post4.jpg" alt="post1" width="230" height="103">
+                        <div class="post__tags"><a href="#">adventures</a><a href="#">travels</a><a href="#">health</a></div>
+                      </div>
+                      <div class="post__caption">
+                        <div class="post__title">Lorem ipsum dolor 4</div>
+                        <div class="post__description">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data. The credibly productivate seamless data.</div>
+                        <div class="post__footer">
+                          <div class="post__footerItem post__subtitle ellipsis ic ic-calendar">April 24, 2022</div>
+                          <div class="post__footerItem post__views ic ic-eye">1835</div>
+                          <div class="post__footerItem post__comments ic ic-comment">240</div>
+                        </div>
+                      </div></a></article>
+                  <article class="post"><a href="#">
+                      <div class="post__thumb"><img class="lazyload" src="" data-src="./img/posts/post5.jpg" alt="post2" width="230" height="103">
+                        <div class="post__tags"><a href="#">adventures</a><a href="#">travels</a><a href="#">health</a></div>
+                      </div>
+                      <div class="post__caption">
+                        <div class="post__title">Lorem ipsum dolor 5</div>
+                        <div class="post__description">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data. The credibly productivate seamless data.</div>
+                        <div class="post__footer">
+                          <div class="post__footerItem post__subtitle ellipsis ic ic-calendar">April 03, 2022</div>
+                          <div class="post__footerItem post__views ic ic-eye">1835</div>
+                          <div class="post__footerItem post__comments ic ic-comment">240</div>
+                        </div>
+                      </div></a></article>
+                  <article class="post"><a href="#">
+                      <div class="post__thumb"><img class="lazyload" src="" data-src="./img/posts/post6.jpg" alt="post3" width="230" height="103">
+                        <div class="post__tags"><a href="#">adventures</a><a href="#">travels</a><a href="#">health</a></div>
+                      </div>
+                      <div class="post__caption">
+                        <div class="post__title">Lorem ipsum dolor 6</div>
+                        <div class="post__description">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data. The credibly productivate seamless data.</div>
+                        <div class="post__footer">
+                          <div class="post__footerItem post__subtitle ellipsis ic ic-calendar">March 12, 2022</div>
+                          <div class="post__footerItem post__views ic ic-eye">1835</div>
+                          <div class="post__footerItem post__comments ic ic-comment">240</div>
+                        </div>
                       </div></a></article>
           </div>
         </div>
       </section>
     </main>
-    <div class="subscribe"> 
-      <div class="container">
-        <div class="subscribe__wrap">
-          <div class="subscribe__text">
-            <div class="heading subscribe__heading">
-               Subscribe to my <span class="text-primary">Newsletters</span></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p>Phasellus malesuada nisi tellus, non imperdiet nisi tempor at.</p>
-          </div>
-          <div class="subscribe__field">
-            <input class="input" type="email" name="email" id="subscriber_email" placeholder="Enter your Email">
-            <button class="btn btn--primary" aria-label="Subscribe button">Subscribe</button>
-          </div>
-        </div>
-      </div>
-    </div>
     <footer class="footer">
       <div class="container">
         <div class="footer__wrap"> 

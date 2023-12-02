@@ -1,9 +1,9 @@
-html
-  overflow-x: hidden
-  &.blocked
-    overflow-y: hidden
-    body
-      padding-right: 16px
+// html
+//   overflow-x: hidden
+//   &.blocked
+//     overflow-y: hidden
+//     body
+//       padding-right: 16px
   
 body
   font-size: $fz
@@ -20,6 +20,13 @@ body
     +flex(column,0,0,0)
   &.compensate-for-scrollbar
     margin-right: 0
+
+  &.overlay
+    +xs
+      padding-right: 16px
+
+  +before
+    +tran(all, $overlay_tran)
 
 
 button,

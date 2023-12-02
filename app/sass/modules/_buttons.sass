@@ -5,7 +5,7 @@
   border: none
   padding: 9px 20px
   border-radius: 30px
-  +text(14,700,0,0)
+  +text(14,400,0,0)
   +xxs
     font-size: 14px
   +xs
@@ -17,12 +17,23 @@
 
   &--primary
     background: -webkit-linear-gradient(270deg, $c_primary_gradient)
-    color: $c_secondary
+    color: $c_default
     white-space: nowrap
     text-overflow: ellipsis
     overflow: hidden
     +hover
-      +xxs
+      +xs
         background: $c_link
         -webkit-text-fill-color: $c_secondary
+
+
+  &.burger
+    &.active
+      //opacity: 0
+      //pointer-events: none
+      position: relative
+      z-index: 1010
+      +tran(opacity, .2s 1s)
+      +before
+        background-position: 363px -126px
 

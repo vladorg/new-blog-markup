@@ -21,7 +21,14 @@ mixin post(post)
     a(href="#")
       .post__thumb
         img(src="" data-src=post.thumb.src, alt=post.thumb.alt width="230" height="103").lazyload
+        .post__tags
+          a(href="#") adventures
+          a(href="#") travels
+          a(href="#") health
       .post__caption
         .post__title=post.title
-        .post__subtitle.ellipsis=post.subtitle
-        .post__description=post.description
+        .post__description Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data. The credibly productivate seamless data.
+        .post__footer
+          .post__footerItem.post__subtitle.ellipsis.ic.ic-calendar=post.subtitle
+          .post__footerItem.post__views.ic.ic-eye 1835
+          .post__footerItem.post__comments.ic.ic-comment 240

@@ -2,13 +2,12 @@ include ../../storage/posts.pug
 include ../../inc/mixins.pug
 
 
-section.postsList
+section.section.populars
   .container
     .sectionHeading.sectionHeading--single 
-      h1.heading.sectionHeading__heading Posts Examples
+      h2.heading.sectionHeading__heading Most 
+        span.text-primary populars
       p.sectionHeading__subtitle Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum.
     .posts
-      each post in posts_list
-        +post(post)
       each post in posts_list
         +post(post)

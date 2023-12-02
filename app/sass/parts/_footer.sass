@@ -1,12 +1,10 @@
 .footer
-  margin-top: 58px
+  margin-top: 36px
   border-top: 1px solid $c_text
   padding: 12px 0
   +xxs
+    margin-top: 60px
     padding: 26px 0
-  +xs
-    margin-top: 116px
-    padding: 26px 0 46px 0
 
   &__wrap
     text-align: center
@@ -16,13 +14,16 @@
       +flex(0,0,space-between,center)
 
   &__copy
-    font-size: 14px
+    font-size: 12px
+    +xxs
+      font-size: 16px
     +xs
       font-size: 20px
 
   &__socials
     margin-top: 8px
     +flex(0,0,center,center)
+    display: none
     +sm
       justify-content: flex-start
       margin-top: 0

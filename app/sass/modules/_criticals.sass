@@ -1,158 +1,8 @@
-.intro
-  margin-top: 24px
-  +xs
-    margin-top: 85px
-
-  &__inner
-    +flex(column-reverse,0,0,center)
-    +xxs
-      +flex(row,0,space-between,center)
-    +md
-      padding-right: 35px
-
-  &__text
-    +xxs
-      max-width: 64%
-
-  &__heading
-    text-align: center
-    margin-top: 16px
-    +xxs
-      text-align: left
-      margin-top: 0
-
-  &__photo
-    max-width: 100px
-    width: 100%
-    +xxs
-      max-width: 27%
-
-  &__socials
-    margin-top: 28px
-    +xxs
-      margin-top: 16px
-    ul
-      +flex(0,wrap,center,center)
-      +xxs
-        justify-content: flex-start
-      li
-        +not_last
-          margin-right: 20px
-          +xxs
-            margin-right: 32px
 
 
-.projects
-  padding-top: 36px
-  +xs
-    padding-top: 132px
-  
-  &__wrap
-    +xxs
-      padding-top: 44px
 
-  &__heading
-    margin-bottom: 20px
-    +xxs
-      margin-bottom: 10px
-    +xs
-      margin-bottom: 40px
-
-
-.project
-  background: $c_project
-  border-radius: 20px
-  padding: 10px
-  display: block
-  +tran(all, .2s)
-  +not_last
-    margin-bottom: 24px
-    +xxs
-      margin-bottom: 40px
-  +xxs
-    +flex(0,0,flex-start,center)
-  +xs
-    padding: 30px
-  &__photo
-    +xxs
-      width: 23%
-    img
-      width: 50px
-      margin: 0 auto
-      +xxs
-        width: 100%
-        height: 190px
-        object-fit: contain
-        margin: 0
-      +xs
-         height: 240px
-  &__descr
-    margin: 18px 0 0 0
-    +xxs
-      margin: 0 0 0 44px
-      max-width: 70%
-  &__name
-    +flex(0,0,center,center)
-    +xxs
-      justify-content: flex-start
-  &__title
-    max-width: 58%
-    +text(18,500,0,$c_heading)
-    +xxs
-      font-size: 24px
-    +xs
-      font-size: 30px
-
-  &__type
-    max-width: 40%
-    margin-left: 10px
-    border-radius: 10px
-    +xxs
-      margin-left: 20px
-    span
-      display: block
-      padding: 8px
-      background-clip: text!important
-      -webkit-background-clip: text!important
-      -webkit-text-fill-color: transparent
-      +text(10,700,0,0)
-      +xxs
-        font-size: 14px
-    &--tpl1
-      background: $c_proj_type1_b
-      span
-        background: $c_proj_type1_t
-    &--tpl2
-      background: $c_proj_type2_b
-      span
-        background: $c_proj_type2_t
-    &--tpl3
-      background: $c_proj_type3_b
-      span
-        background: $c_proj_type3_t
-        
-  &__subtitle
-    padding-top: 18px
-    +ellipsis(60px, 2, true)
-    +xxs
-      padding-top: 26px
-      max-height: 84px
-    +xs
-      max-height: 100px
-    p
-      +text(14,400,0,0)
-      +xs
-        font-size: 20px
-        line-height: 42px
-      // +not_last
-      //   margin-bottom: 8px
-      //   +xxs
-      //     margin-bottom: 14px
-  
-  +hover
-    +xs
-      transform: scale(1.01)
-
+.burger
+  padding-right: 0
 
 .posts
   +xxs
@@ -161,68 +11,217 @@
     grid-gap: 20px
   +sm
     grid-template-columns: repeat(3, 1fr)
+  +md
+    grid-template-columns: repeat(4, 1fr)
+  +lg
+    //grid-template-columns: repeat(4, 1fr)
 
 
 .post
-  border-radius: 20px
+  border-radius: 12px
   overflow: hidden
   background: $c_post
   display: block
+  +xs
+    border-radius: 20px
 
   +xxs
     max-width: 100%
 
   +not_last
-    margin-bottom: 32px
+    margin-bottom: 16px
     +xxs
       margin-bottom: 0
   
   &__thumb
     overflow: hidden
+    position: relative
     img
       width: 100%
       height: 183px
-      object-fit: cover
-      +tran(transform, .5s)
-      +xxs
+      object-fit: cover      
+      +xs
         height: 293px
+        +tran(transform, .5s)
+
+  &__tags
+    position: absolute
+    top: 16px
+    left: 16px
+    gap: 8px
+    +flex(0,wrap,flex-start,center)
+    +xs
+      top: 10px
+      left: 10px
+    
+    a
+      display: block
+      padding: 4px 8px
+      background: $c_default
+      border-radius: 8px
+      text-align: center
+      text-transform: uppercase
+      +text(10,700,0,#000)
+      +xs
+        font-size: 12px
+        padding: 6px 12px
+        background: $c_tag
+
+
+      +first
+        display: none
+
+      +hover
+        +xs
+          background: $c_default
+          +tran(all, .2s)
 
   &__caption
     padding: 14px
     +xxs
-      padding: 22px 14px 14px
+      padding: 16px
   &__title
-    +text(18,700,0,0)
-    +ellipsis(54px, 2, true)
-    +xxs
-      font-size: 20px  
-      max-height: 60px    
+    text-decoration: underline
+    +text(16,700,0,$c_default)
+    +ellipsis(54px, 2, true) 
     +xs
-      font-size: 24px
-      max-height: 72px
+      font-size: 22px
+      max-height: 66px
+      text-decoration: none
   &__subtitle
-    margin-top: 8px
-    +text(14,400,0,$c_post_subtitle)
-    +xxs
-      font-size: 14px
-    +xs
-      font-size: 20px
   &__description
-    margin-top: 16px
-    font-size: 14px
-    +ellipsis(105px, 5, true)
-    +xxs
-      font-size: 14px
-      max-height: 105px      
+    margin-top: 8px
+    +text(12,0,0,$c_default)
+    +ellipsis(90px, 5, true)    
     +xs
-      font-size: 20px
-      max-height: 150px
+      font-size: 18px
+      max-height: 120px
+      line-height: 24px
+      margin-top: 16px
+  &__footer
+    padding-top: 8px
+    +flex(0,0,0,center)
+    +text(12,400,0,$c_post_subtitle)
+    +xxs
+      font-size: 10px
+    +xs
+      font-size: 14px
+      padding-top: 16px
+
+  &__footerItem
+    +flex(0,0,flex-start,center)
+    +before
+      margin-right: 4px
+
+  &__views
+    margin-left: auto
+    margin-right: 12px
   
   +hover
-    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 36%)
+    cursor: pointer
+    +xs
+      //box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 36%)
+      background: -webkit-linear-gradient(270deg, $c_post_gradient_hover)
+    
+
+    .post__title
+      +xs
+        //text-decoration: underline
 
     .post__thumb
       img
-        transform: scale(1.5)
-        +tran(transform, 5s)
+        +xs
+          //transform: scale(1.5)
+          //+tran(transform, 5s)
 
+
+
+.heroHome
+
+  &__wrap
+    +flex(0,0,space-between,0)
+
+  &__caption
+    position: absolute
+    bottom: 0
+    left: 0
+    background: $c_shadow_overlay
+    width: 100%
+    padding: 16px
+    
+    +text(16,700,0,0)
+    +xs
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      +tran(top, .8s)
+
+  &__el
+    overflow: hidden 
+
+    a
+      display: block      
+      position: relative
+
+      +xs
+        height: 225px
+
+      +hover
+        .heroHome__caption
+          +xs
+            top: 0
+            text-decoration: underline
+
+        img
+          +xs
+            animation-play-state: paused
+
+    &--big      
+      +xs
+        width: 75%
+        margin-right: 20px
+
+      a
+        +xs
+          height: 470px
+
+      img
+        animation: scaled 20s linear alternate infinite
+        animation-delay: 2s
+
+      .heroHome__caption
+        padding: 12px 4%     
+        +xxs
+          font-size: 18px     
+        +xs
+          font-size: 20px
+          padding: 26px 26px 26px calc(4%)
+        +md
+          padding: 26px 26px 26px calc((100vw - $container) / 2 - 8px)
+        +lg
+          padding: 26px 26px 26px calc((100vw - $container-lg) / 2 - 8px)
+
+    &--small
+      width: 25%
+      a 
+        & + a
+          margin-top: 20px
+      
+      .heroHome__caption
+        padding-right: 24px
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+    
+
+
+@keyframes scaled
+  from
+    transform: scale(1)
+  to
+    transform: scale(1.5)
+
+  

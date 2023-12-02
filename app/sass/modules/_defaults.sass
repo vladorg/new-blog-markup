@@ -1,3 +1,20 @@
+
+
+
+.overlay
+  overflow-y: hidden
+  +before
+    display: block
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: $c_overlay
+    z-index: 1000    
+  
+  
+  
 .link
   +hover
     +xs
@@ -7,12 +24,11 @@
 
 
 .sectionHeading
-  padding-bottom: 20px
-  +xxs
-    padding-bottom: 10px
-  +xs
-    padding-bottom: 40px
+  margin-bottom: 24px
   +flex(0,0,space-between,center)
+  +xs 
+    margin-bottom: 48px
+    
 
   &__heading
     margin-bottom: 0 !important
@@ -23,10 +39,8 @@
     font-size: 14px
     +xxs
       font-size: 16px
-      margin-top: 24px
     +xs
       font-size: 20px
-      margin-top: 38px
     
 
   &__link
@@ -48,16 +62,14 @@
 
 
 .subscribe
-  padding-top: 42px
+  padding: 24px 0
+  background: $c_subscribe_bg
   +xxs
-    padding-top: 80px
+    padding: 40px 0
   +xs
-    padding-top: 132px
+    padding: 60px 0
 
   &__wrap
-    +xxs
-      max-width: 70%
-      margin: 0 auto
     +xs
       max-width: 100%
     +sm
@@ -74,7 +86,7 @@
     p
       font-size: 14px
       +xs
-        font-size: 20px
+        font-size: 18px
 
   &__heading
     margin-bottom: 20px
@@ -96,7 +108,9 @@
         right: 17px
     
     .input
-      padding-right: 190px
+      padding-right: 130px
+      +xs
+        padding-right: 190px
 
 
 
