@@ -1,3 +1,56 @@
+
+h1, h2, h3, h4, h5, h6
+  color: $c_default
+  margin-bottom: 8px
+
+h1
+  font-size: 48px  
+h2
+  font-size: 20px
+  +xxs
+    font-size: 30px
+h3
+  font-size: 18px
+  +xxs
+    font-size: 26px
+h4, h5, h6
+  font-size: 16px
+  +xxs
+    font-size: 22px
+
+
+blockquote
+  margin: 16px 0
+  background: $c_secondary
+  padding: 12px
+  border-left: 5px solid $c_primary_single
+
+
+table
+  th, td
+    border: 2px solid #AEAFB3
+    padding: 6px
+    vertical-align: middle
+    text-align: center
+    font-size: 12px
+    max-width: 100%
+    text-overflow: ellipsis
+    overflow: hidden
+    +xxs
+      font-size: 14px
+      padding: 12px
+  th
+    color: $c_default
+    background: $c_secondary
+    text-decoration: underline
+    +xxs
+      font-size: 16px
+  tr
+    +odd
+      background: $c_secondary
+
+  
+  
 .heading
   margin-bottom: 16px
   +text(26,700,32,$c_heading)
@@ -5,12 +58,17 @@
     font-size: 32px
     line-height: normal
   +xs
-    margin-bottom: 48px
     font-size: 34px
   +md
     font-size: 40px
   +lg
     font-size: 48px
+
+.subheading
+  margin-bottom: 16px
+  +text(18,700,32,$c_heading)
+  +xs
+    font-size: 30px
     
 
 .subtitle

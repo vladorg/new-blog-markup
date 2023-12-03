@@ -1,0 +1,13 @@
+include ../../storage/populars.pug
+
+div.populars
+  .subheading.populars__title Popular 
+    span.text-primary posts:
+  each popular in populars
+    a.popular(href="#")
+      img.popular__thumb(src=popular.img, alt="")
+      .popular__caption 
+        p.popular__title=popular.title
+        .popular__footer
+          span.ic.ic-eye 1835
+          span.ic.ic-comment 240

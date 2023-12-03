@@ -9,7 +9,7 @@ body
   font-size: $fz
   font-weight: $fw
   font-family: $ff
-  line-height: $lh
+  line-height: normal
   // overflow-x: hidden
   overflow-x: clip
   background: $c_body
@@ -45,32 +45,8 @@ a
   +hover
     text-decoration: none
 
-section
-  //overflow: hidden
 
-table
-  th, td
-    border: 1px solid #AEAFB3
-    padding: 20px 32px
-    vertical-align: middle
-    +text(16,500,22,0)
-  th
-    font-weight: 600
-    color: #000
 
-ul.ul
-  li
-    +text(14,400,22,0)
-    +flex(0,0,0,flex-start)
-    +before
-      display: inline-block
-      min-width: 7px
-      min-height: 7px
-      background: $c_primary
-      border-radius: 50%
-      margin: 8px 8px 0 0
-    +not_last
-      margin-bottom: 16px
 
 
 .scroll
@@ -112,10 +88,6 @@ ul.ul
   display: none!important
 
 
-  
-.content
-  p
-    margin-bottom: 16px
 
 
 div, img, section, span, p
@@ -124,24 +96,6 @@ div, img, section, span, p
   &:focus
     outline: none
 
-
-h1, h2, h3, h4, h5, h6
-  color: $c_default
-
-h1
-  font-size: 48px  
-h2
-  font-size: 24px
-  +xxs
-    font-size: 36px
-h3
-  font-size: 20px
-  +xxs
-    font-size: 28px
-h4, h5, h6
-  font-size: 18px
-  +xxs
-    font-size: 24px
 
 
 

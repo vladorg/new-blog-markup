@@ -48,33 +48,13 @@
     position: absolute
     top: 16px
     left: 16px
-    gap: 8px
-    +flex(0,wrap,flex-start,center)
     +xs
       top: 10px
       left: 10px
     
     a
-      display: block
-      padding: 4px 8px
-      background: $c_default
-      border-radius: 8px
-      text-align: center
-      text-transform: uppercase
-      +text(10,700,0,#000)
-      +xs
-        font-size: 12px
-        padding: 6px 12px
-        background: $c_tag
-
-
       +first
         display: none
-
-      +hover
-        +xs
-          background: $c_default
-          +tran(all, .2s)
 
   &__caption
     padding: 14px
@@ -88,7 +68,6 @@
       font-size: 22px
       max-height: 66px
       text-decoration: none
-  &__subtitle
   &__description
     margin-top: 8px
     +text(12,0,0,$c_default)
@@ -101,7 +80,7 @@
   &__footer
     padding-top: 8px
     +flex(0,0,0,center)
-    +text(12,400,0,$c_post_subtitle)
+    +text(12,400,0,$c_default)
     +xxs
       font-size: 10px
     +xs
@@ -112,6 +91,10 @@
     +flex(0,0,flex-start,center)
     +before
       margin-right: 4px
+      display: inline-block
+  &__subtitle
+    max-width: 44%
+    display: block
 
   &__views
     margin-left: auto

@@ -74,6 +74,10 @@
   &:not(:last-child)
     @content
 
+@mixin odd
+  &:nth-child(odd)
+    @content
+
 @mixin tran($on, $time)
   transition: $on $time
 

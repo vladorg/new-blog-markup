@@ -1,0 +1,10 @@
+include ../../storage/categories.pug
+
+.categoriesTree
+  .subheading.categoriesTree__title Categories:
+  ul
+    each category in categories
+      li(class=category.active ? 'active' : '')
+        a(href="") 
+          img(src=category.img, alt="")
+          span.ellipsis=category.title

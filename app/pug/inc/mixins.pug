@@ -1,6 +1,5 @@
 mixin project(project)
   - let type = 'project__type--' + project.type.tpl;
-  //- let aria_label = 'Go to project: ' + project.title;
   
   a.project(href="#")
     .project__photo
@@ -15,16 +14,14 @@ mixin project(project)
 
 
 mixin post(post)  
-  //- let aria_label2 = 'Go to post: ' + post.title;
-
   article.post
     a(href="#")
       .post__thumb
         img(src="" data-src=post.thumb.src, alt=post.thumb.alt width="230" height="103").lazyload
-        .post__tags
-          a(href="#") adventures
-          a(href="#") travels
-          a(href="#") health
+        .post__tags.tags
+          a(href="#").tag adventures
+          a(href="#").tag travels
+          a(href="#").tag health
       .post__caption
         .post__title=post.title
         .post__description Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data. The credibly productivate seamless data.

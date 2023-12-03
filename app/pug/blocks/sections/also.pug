@@ -1,0 +1,12 @@
+include ../../storage/latest.pug
+include ../../inc/mixins.pug
+
+section.section.also
+  .container
+    .sectionHeading 
+      h2.heading.sectionHeading__heading Also on 
+        span.text-primary topic
+    .posts
+      each post in latest_list
+        +post(post)
+        +post(post)

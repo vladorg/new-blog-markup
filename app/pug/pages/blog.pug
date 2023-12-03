@@ -1,5 +1,7 @@
 - var title = "Blog page";
 
+// TODO: remove adverts before build
+
 doctype html
 html(lang="en")
   include ../blocks/head.pug
@@ -7,9 +9,22 @@ html(lang="en")
 
     include ../blocks/header/header.pug
 
-    main.main
-      include ../blocks/sections/posts.pug
+    .page-info 
+      .container
+        h1.heading Adventures & 
+          span.text-primary Travels
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, enim.
+
+    .page-advert
+      .container
+        include ../blocks/adverts/advert-hero.pug
     
-    include ../blocks/sections/subscribe.pug
+    .useSidebar
+
+      main.main
+        include ../blocks/blog/posts.pug
+        include ../blocks/blog/pagination.pug
+      
+      include ../blocks/sidebar/sidebar.pug
 
     include ../blocks/footer/footer.pug

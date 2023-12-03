@@ -1,0 +1,8 @@
+include ../../storage/posts.pug
+include ../../inc/mixins.pug
+
+
+section.posts
+  each post in posts_list
+    +post(post)
+    +post(post)

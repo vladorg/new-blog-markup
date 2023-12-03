@@ -59,8 +59,6 @@
 
 
 
-
-
 .subscribe
   padding: 24px 0
   background: $c_subscribe_bg
@@ -114,8 +112,119 @@
 
 
 
-
 .ellipsis
   white-space: nowrap
   text-overflow: ellipsis
   overflow: hidden
+
+
+
+.page-info 
+  margin-top: 24px
+
+  p
+    font-size: 14px
+    +xs
+      font-size: 18px
+
+  
+
+.page-advert
+  +sm
+    display: none
+
+
+
+.useSidebar
+  gap: 20px
+  margin-top: 32px
+  padding: 0 calc((100% - 92% )/ 2)
+  +flex(0,0,space-between,0)
+
+  +sm
+    margin-top: 64px
+
+  +md
+    padding: 0 calc((100vw - $container )/ 2)
+
+  +lg
+    padding: 0 calc((100vw - $container_lg )/ 2)
+
+  .main
+    width: 100%
+
+    +sm
+      width: 75%
+
+    .posts
+      grid-template-columns: repeat(2, 1fr)
+
+      +xs
+        grid-template-columns: repeat(2, 1fr)
+
+      +md
+        grid-template-columns: repeat(3, 1fr)
+
+
+  .sidebar
+    width: 25%
+    display: none
+    +sm
+      display: block
+
+
+          
+.advert
+  width: 100%
+  height: 350px
+  background: #FCA130
+  margin-top: 24px
+  color: #fff
+  +flex(0,0,center,center)
+
+  &--hero
+    height: 70px
+
+
+.tags
+  gap: 12px
+  +flex(0,wrap,flex-start,center)
+  +xs
+    gap: 16px
+
+
+.tag
+  display: inline-block
+  padding: 4px 8px
+  background: $c_default
+  border-radius: 8px
+  text-align: center
+  text-transform: uppercase
+  +text(10,700,0,#000)
+  +xs
+    font-size: 12px
+    padding: 6px 12px
+    background: $c_tag
+  +hover
+    +xs
+      background: $c_default
+      +tran(all, .2s)
+
+
+
+.share
+  +flex(0,0,flex-start,center)
+  span
+    font-size: 14px
+    +flex(0,0,flex-start,center)
+    +before
+      margin-right: 4px
+    +xs
+      font-size: 18px
+  ul
+    margin-left: 20px
+    +flex(0,0,flex-start,center)
+
+    li
+      +not_last
+        margin-right: 14px
