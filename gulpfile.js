@@ -94,7 +94,7 @@ gulp.task('buildCss', function() {
 	.pipe(concat('style.css'))
 	.pipe(gcmq())
 	.pipe(gulp.dest('dist/css/'))
-	.pipe(cssnano({autoprefixer: {
+	.pipe(cssnano({reduceIdents: false, autoprefixer: {
 		browsers:['last 50 versions', '> 1%', 'ie 8', 'ie 7'], 
 		add: true
 	}}))	
@@ -106,7 +106,7 @@ gulp.task('buildCssCritical', function() {
 	return gulp.src('app/css/critical.css')
 	.pipe(gcmq())
 	.pipe(gulp.dest('dist/css/'))
-	.pipe(cssnano({autoprefixer: {
+	.pipe(cssnano({reduceIdents: false, autoprefixer: {
 		browsers:['last 50 versions', '> 1%', 'ie 8', 'ie 7'], 
 		add: true
 	}}))	
