@@ -997,13 +997,13 @@
 .postNav__open {
   position: fixed;
   top: 50%;
-  left: 0;
-  width: 50px;
-  height: 50px;
-  margin-top: -25px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
   padding: 0;
   background: #325EB4;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 10px 0 0 10px;
   -webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.41);
           box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.41);
   z-index: 50;
@@ -1017,6 +1017,13 @@
       -ms-flex-align: center;
           align-items: center;
 }
+@media (min-width: 500px) {
+  .postNav__open {
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+  }
+}
 .postNav__open:hover {
   background: #1E293B;
 }
@@ -1025,15 +1032,15 @@
       -ms-transform: scale(0);
           transform: scale(0);
   opacity: 0;
-  -webkit-transform-origin: -50% 50%;
-      -ms-transform-origin: -50% 50%;
-          transform-origin: -50% 50%;
+  -webkit-transform-origin: 150% 50%;
+      -ms-transform-origin: 150% 50%;
+          transform-origin: 150% 50%;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 .postNav__content {
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
   height: 100%;
   background: #1E293B;
@@ -1041,11 +1048,11 @@
   -webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.41);
           box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.41);
   padding: 14px;
-  padding-right: 70px;
+  padding-left: 32px;
   border-radius: 0px 10px 10px 0px;
-  -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
   opacity: 0;
   pointer-events: none;
   display: -webkit-box;
@@ -1068,6 +1075,15 @@
   -webkit-transition: all 0.4s 0.2s;
   transition: all 0.4s 0.2s;
 }
+.postNav__content ul li a:hover {
+  text-decoration: underline;
+}
+.postNav__content ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.postNav__content ul li.active a {
+  color: #325EB4;
+}
 .postNav__title {
   margin-bottom: 8px;
   font-size: 22px;
@@ -1082,7 +1098,7 @@
   padding: 0;
   position: absolute;
   top: 50%;
-  right: 12px;
+  left: -19px;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);

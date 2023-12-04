@@ -143,16 +143,21 @@
   &__open
     position: fixed
     top: 50%
-    left: 0
-    width: 50px
-    height: 50px
-    margin-top: -25px
+    right: 0
+    width: 40px
+    height: 40px
+    margin-top: -20px
     padding: 0
     background: $c_primary_single
-    border-radius: 0px 10px 10px 0px
+    border-radius: 10px 0 0 10px
     box-shadow: $c_postnav_shadow
     z-index: 50
     +flex(0,0,center,center)
+    +xxs
+      width: 50px
+      height: 50px
+      margin-top: -25px
+
     +hover
       background: $c_secondary
     
@@ -160,22 +165,22 @@
     &.active
       transform: scale(0)
       opacity: 0
-      transform-origin: -50% 50%
+      transform-origin: 150% 50%
       +tran(all,.4s)
       
 
   &__content
     position: fixed
-    left: 0
+    right: 0
     top: 0
     height: 100%
     background: $c_secondary
     z-index: 50
     box-shadow: $c_postnav_shadow
     padding: 14px
-    padding-right: 70px
+    padding-left: 32px
     border-radius: 0px 10px 10px 0px
-    transform: translateX(-100%)
+    transform: translateX(100%)
     opacity: 0
     pointer-events: none
     +flex(column,0,center,0)
@@ -185,6 +190,20 @@
       opacity: 1
       pointer-events: auto
       +tran(all,.4s .2s)
+
+    ul
+
+      li
+        a
+          +hover
+            text-decoration: underline
+
+        +not_last
+          margin-bottom: 10px
+
+        &.active
+          a
+            color: $c_primary_single
       
 
   &__title
@@ -199,7 +218,7 @@
     padding: 0
     position: absolute
     top: 50%
-    right: 12px
+    left: -19px
     transform: translateY(-50%)
     +flex(0,0,center,center)
     +hover
