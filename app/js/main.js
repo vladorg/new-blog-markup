@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
   const contents_closer = document.querySelector('#contents_close');
 
   const content_wrap = document.querySelector('.content');
-  const content_elements = content_wrap.querySelectorAll('h1, h2, h3, h4, h5, h6');
+  const content_elements = content_wrap ? content_wrap.querySelectorAll('h1, h2, h3, h4, h5, h6') : [];
   const content_headers_store = document.querySelector('#contents ul');
 
   let content_headers_offsets = [];
@@ -20,12 +20,12 @@ window.addEventListener('load', () => {
     burger_btn.classList.toggle('active');
   });
 
-  contents_opener.addEventListener('click', e => {
+  contents_opener && contents_opener.addEventListener('click', e => {
     contents_opener.classList.add('active');
     contents.classList.add('opened');
   });
 
-  contents_closer.addEventListener('click', e => {
+  contents_closer && contents_closer.addEventListener('click', e => {
     contents_opener.classList.remove('active');
     contents.classList.remove('opened');
   });
